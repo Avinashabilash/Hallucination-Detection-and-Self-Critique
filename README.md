@@ -12,6 +12,19 @@ A lightweight framework to detect, score, and reduce hallucinations in LLMs by c
 
 ## 🔄 Flowchart (Mermaid)
 
+
+## Architecture Breakdown
+
+Retriever Layer: Uses FAISS + MiniLM to fetch the top-k meaningful evidence.
+
+Generator Layer: Flan-T5 produces:
+
+Baseline answer (no context)
+
+RAG answer (context injected)
+
+Critique Layer: The model evaluates its own output.
+
 ```mermaid
 flowchart TD
   A[User Question] --> B[Retriever (FAISS + MiniLM)]
@@ -25,16 +38,3 @@ flowchart TD
   I --> G
   style A fill:#f9f,stroke:#333,stroke-width:1px
   style H fill:#bbf,stroke:#333,stroke-width:1px
-```
-## Architecture Breakdown
-
-Retriever Layer: Uses FAISS + MiniLM to fetch the top-k meaningful evidence.
-
-Generator Layer: Flan-T5 produces:
-
-Baseline answer (no context)
-
-RAG answer (context injected)
-
-Critique Layer: The model evaluates its own output.
-
