@@ -25,16 +25,16 @@ RAG answer (context injected)
 
 Critique Layer: The model evaluates its own output.
 
+## 🔄 Flowchart (Mermaid)
+
 ```mermaid
 flowchart TD
-  A[User Question] --> B[Retriever (FAISS + MiniLM)]
-  B --> C[Top-k Evidence]
-  C --> D[Prompt Constructor (RAG)]
-  D --> E[Answer Generator (Flan-T5)]
-  E --> F[Self-Critique Module]
-  F --> G[Hallucination Detector & Scorer]
-  G --> H[Results.csv & Visualizations]
-  E --> I[Baseline Generator (no retrieval)]
-  I --> G
-  style A fill:#f9f,stroke:#333,stroke-width:1px
-  style H fill:#bbf,stroke:#333,stroke-width:1px
+    A[User Question] --> B[Retriever using FAISS and MiniLM]
+    B --> C[Top k Evidence]
+    C --> D[RAG Prompt Builder]
+    D --> E[Answer Generator Flan T5]
+    E --> F[Self Critique Module]
+    F --> G[Hallucination Scorer]
+    G --> H[Results CSV and Visualization]
+    E --> I[Baseline Generator]
+    I --> G
