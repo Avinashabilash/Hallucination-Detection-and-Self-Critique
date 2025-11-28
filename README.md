@@ -10,9 +10,6 @@ A lightweight framework to detect, score, and reduce hallucinations in LLMs by c
 
 ---
 
-## 🔄 Flowchart (Mermaid)
-
-
 ## Architecture Breakdown
 
 Retriever Layer: Uses FAISS + MiniLM to fetch the top-k meaningful evidence.
