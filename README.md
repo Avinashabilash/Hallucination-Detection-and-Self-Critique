@@ -38,16 +38,3 @@ RAG answer (context injected)
 
 Critique Layer: The model evaluates its own output.
 
-## Evaluation Layer: Detects unsupported claims.
-
-Output Layer: Generates CSV logs, ready for analysis.
-
-Evaluation Metrics (Planned/Future Work)
-
-Faithfulness Score: Measures evidence alignment.
-
-Semantic Similarity: Embedding cosine similarity.
-
-Contradiction Detection: Using NLI models.
-
-Hallucination Percentage: Baseline vs RAG comparison.
